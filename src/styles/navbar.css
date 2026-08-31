@@ -1,0 +1,242 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid transparent;
+
+    background-color: transparent;
+
+    transition:
+        background-color var(--transition-base),
+        border-color var(--transition-base),
+        backdrop-filter var(--transition-base);
+}
+
+.navbar--scrolled {
+    border-bottom-color: var(--color-border);
+
+    background-color: rgba(9, 9, 11, 0.8);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.navbar__container {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: var(--space-lg);
+}
+
+/* ================================
+   LOGO
+================================= */
+
+.navbar__brand {
+    position: relative;
+    z-index: 1001;
+
+    font-size: 1.4rem;
+    font-weight: 800;
+
+    letter-spacing: -0.04em;
+}
+
+.navbar__brand span {
+    color: var(--color-primary);
+}
+
+/* ================================
+   NAVEGACIÓN
+================================= */
+
+.navbar__nav {
+    display: flex;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+.navbar__link {
+    position: relative;
+
+    color: var(--color-text-secondary);
+
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+
+    transition: color var(--transition-fast);
+}
+
+.navbar__link:hover {
+    color: var(--color-text);
+}
+
+.navbar__link::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -0.4rem;
+
+    width: 0;
+    height: 2px;
+
+    background-color: var(--color-primary);
+
+    transition: width var(--transition-base);
+}
+
+.navbar__link:hover::after {
+    width: 100%;
+}
+
+/* ================================
+   BOTÓN CONTACTO
+================================= */
+
+.navbar__contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding-inline: 1.25rem;
+
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+
+    color: var(--color-primary);
+
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+
+    transition:
+        background-color var(--transition-base),
+        color var(--transition-base);
+}
+
+.navbar__contact:hover {
+    background-color: var(--color-primary);
+    color: #020617;
+}
+
+/* ================================
+   BOTÓN MENÚ MÓVIL
+================================= */
+
+.navbar__toggle {
+    display: none;
+
+    position: relative;
+    z-index: 1001;
+
+    width: 44px;
+    height: 44px;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+    background: transparent;
+}
+
+.navbar__toggle span {
+    display: block;
+
+    width: 24px;
+    height: 2px;
+
+    border-radius: 999px;
+
+    background-color: var(--color-text);
+
+    transition:
+        transform var(--transition-base),
+        opacity var(--transition-base);
+}
+
+/* ================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+    .navbar__container {
+        min-height: 68px;
+    }
+
+    .navbar__toggle {
+        display: flex;
+    }
+
+    .navbar__nav {
+        position: fixed;
+
+        top: 0;
+        right: 0;
+
+        width: min(85%, 360px);
+        height: 100vh;
+
+        padding:
+            7rem var(--space-lg) var(--space-lg);
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: var(--space-lg);
+
+        border-left: 1px solid var(--color-border);
+
+        background-color: var(--color-bg-secondary);
+
+        transform: translateX(100%);
+
+        transition: transform var(--transition-base);
+    }
+
+    .navbar__nav--open {
+        transform: translateX(0);
+    }
+
+    .navbar__link {
+        width: 100%;
+
+        font-size: var(--font-size-lg);
+    }
+
+    .navbar__contact {
+        width: 100%;
+
+        margin-top: var(--space-sm);
+    }
+
+    /* Hamburguesa → X */
+
+    .navbar__toggle--active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .navbar__toggle--active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar__toggle--active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
