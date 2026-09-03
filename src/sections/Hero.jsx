@@ -20,14 +20,16 @@ function Hero() {
                     </h1>
 
                     <h2 className="hero__subtitle">
-                        Ingeniero en Desarrollo de Software
+                        Licenciado en Pedagogía de la Informática
+                        <br />
+                        Maestrante en Ingeniería de Software
                         y Sistemas de Información
                     </h2>
 
                     <p className="hero__description">
-                        Desarrollo soluciones de software orientadas a resolver
-                        problemas reales mediante aplicaciones web, automatización
-                        y sistemas de información.
+                        Desarrollo soluciones de software y sistemas de información
+                        orientados a resolver problemas reales, combinando programación,
+                        desarrollo web y una sólida formación tecnológica.
                     </p>
 
                     <div className="hero__actions">

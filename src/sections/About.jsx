@@ -9,14 +9,16 @@ function About() {
             <div className="container">
 
                 <div className="section__header">
+
                     <span className="section__eyebrow">
                         Sobre mí
                     </span>
 
                     <h2 className="section__title">
-                        Construyendo soluciones,
-                        no solamente código.
+                        De la tecnología educativa
+                        al desarrollo de software.
                     </h2>
+
                 </div>
 
                 <div className="about__content">
@@ -24,21 +26,23 @@ function About() {
                     <div className="about__text">
 
                         <p>
-                            Soy Ingeniero en Desarrollo de Software y Sistemas de
-                            Información, con experiencia profesional como desarrollador
-                            junior.
+                            Soy Licenciado en Pedagogía de la Informática y actualmente
+                            curso una Maestría en Ingeniería de Software y Sistemas
+                            de Información.
                         </p>
 
                         <p>
-                            Me interesa diseñar y desarrollar soluciones de software
-                            que permitan resolver problemas reales, optimizar procesos
-                            y gestionar información de manera eficiente.
+                            Mi formación me ha permitido trabajar con programación,
+                            desarrollo web, robótica, microcontroladores, impresión 3D
+                            y tecnologías emergentes, desarrollando una visión amplia
+                            sobre cómo utilizar la tecnología para resolver problemas.
                         </p>
 
                         <p>
-                            Actualmente continúo fortaleciendo mis conocimientos en
-                            desarrollo web, arquitectura de software, backend y
-                            tecnologías modernas, aplicándolos en proyectos reales.
+                            Actualmente estoy orientando mi crecimiento profesional
+                            hacia el desarrollo de software y sistemas de información,
+                            fortaleciendo mis conocimientos mediante experiencia
+                            profesional y proyectos de software reales.
                         </p>
 
                     </div>
@@ -46,6 +50,7 @@ function About() {
                     <div className="about__highlights">
 
                         <article className="about__highlight">
+
                             <span className="about__highlight-number">
                                 01
                             </span>
@@ -54,13 +59,15 @@ function About() {
                                 <h3>Desarrollo de Software</h3>
 
                                 <p>
-                                    Construcción de soluciones mantenibles orientadas
-                                    a necesidades reales.
+                                    Diseño y desarrollo de soluciones mediante programación,
+                                    desarrollo web y buenas prácticas de ingeniería.
                                 </p>
                             </div>
+
                         </article>
 
                         <article className="about__highlight">
+
                             <span className="about__highlight-number">
                                 02
                             </span>
@@ -69,25 +76,28 @@ function About() {
                                 <h3>Sistemas de Información</h3>
 
                                 <p>
-                                    Análisis de procesos, información y necesidades
-                                    para diseñar soluciones tecnológicas.
+                                    Interés en el análisis de procesos, datos y necesidades
+                                    organizacionales para construir soluciones tecnológicas.
                                 </p>
                             </div>
+
                         </article>
 
                         <article className="about__highlight">
+
                             <span className="about__highlight-number">
                                 03
                             </span>
 
                             <div>
-                                <h3>Aprendizaje continuo</h3>
+                                <h3>Perfil tecnológico multidisciplinario</h3>
 
                                 <p>
-                                    Incorporación progresiva de nuevas tecnologías
-                                    mediante proyectos prácticos.
+                                    Experiencia previa con robótica, microcontroladores,
+                                    tecnologías inmersivas e impresión 3D.
                                 </p>
                             </div>
+
                         </article>
 
                     </div>

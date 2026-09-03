@@ -88,6 +88,14 @@ function Navbar() {
                     </a>
 
                     <a
+                        href="#formacion"
+                        className="navbar__link"
+                        onClick={closeMenu}
+                    >
+                        Formación
+                    </a>
+                    
+                    <a
                         href="#contacto"
                         className="navbar__contact"
                         onClick={closeMenu}
