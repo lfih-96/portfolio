@@ -9,7 +9,7 @@
 
 .education__item {
     display: grid;
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: 160px 1fr;
 
     gap: var(--space-xl);
 
@@ -22,23 +22,62 @@
     border-bottom: 1px solid var(--color-border);
 }
 
+/* ================================
+   PERIODO
+================================= */
+
 .education__period {
+    padding-top: 0.35rem;
+
     color: var(--color-primary);
 
     font-size: var(--font-size-sm);
     font-weight: 700;
 }
 
+/* ================================
+   CONTENIDO
+================================= */
+
 .education__content {
     max-width: 800px;
 }
 
+.education__content h3 {
+    margin-bottom: var(--space-xs);
+
+    font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.education__institution {
+    color: var(--color-text);
+
+    font-weight: 600;
+}
+
+.education__modality,
+.education__location {
+    margin-top: 0.2rem;
+
+    font-size: var(--font-size-sm);
+}
+
+.education__description {
+    max-width: 700px;
+
+    margin-top: var(--space-md);
+}
+
+/* ================================
+   ESTADO
+================================= */
+
 .education__status {
-    display: inline-block;
+    display: inline-flex;
 
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-md);
 
-    padding: 0.35rem 0.65rem;
+    padding: 0.35rem 0.75rem;
 
     border: 1px solid var(--color-primary);
     border-radius: 999px;
@@ -50,25 +89,19 @@
 }
 
 .education__status--completed {
-    color: var(--color-text-secondary);
     border-color: var(--color-border);
+
+    color: var(--color-text-secondary);
 }
 
-.education__content h3 {
-    margin-bottom: var(--space-xs);
-}
-
-.education__institution {
-    margin-bottom: var(--space-md);
-
-    color: var(--color-text);
-
-    font-weight: 600;
-}
+/* ================================
+   BECA
+================================= */
 
 .education__scholarship {
-    margin-top: var(--space-lg);
+    max-width: 650px;
 
+    margin-top: var(--space-lg);
     padding: var(--space-md);
 
     border-left: 3px solid var(--color-primary);
@@ -76,16 +109,28 @@
     background-color: var(--color-bg-secondary);
 }
 
-.education__scholarship strong {
+.education__scholarship-label {
     display: block;
 
     margin-bottom: var(--space-xs);
+
+    color: var(--color-text);
+
+    font-weight: 700;
 }
+
+/* ================================
+   RESPONSIVE
+================================= */
 
 @media (max-width: 768px) {
     .education__item {
         grid-template-columns: 1fr;
 
         gap: var(--space-md);
+    }
+
+    .education__period {
+        padding-top: 0;
     }
 }

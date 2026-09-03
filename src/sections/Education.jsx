@@ -18,14 +18,15 @@ function Education() {
                     </h2>
 
                     <p className="section__description">
-                        Mi formación combina informática, educación
-                        e ingeniería de software, fortaleciendo una visión
-                        multidisciplinaria para el desarrollo de soluciones tecnológicas.
+                        Mi trayectoria académica combina informática, tecnología,
+                        educación e ingeniería de software, fortaleciendo una visión
+                        multidisciplinaria para el desarrollo de soluciones digitales.
                     </p>
                 </div>
 
                 <div className="education__timeline">
 
+                    {/* Maestría */}
                     <article className="education__item">
 
                         <div className="education__period">
@@ -47,21 +48,24 @@ function Education() {
                                 TECH Universidad Tecnológica
                             </p>
 
-                            <p>
-                                Programa cursado en modalidad en línea,
-                                orientado al desarrollo de software,
-                                arquitectura, sistemas de información
-                                y tecnologías aplicadas a entornos profesionales.
+                            <p className="education__modality">
+                                Modalidad en línea
+                            </p>
+
+                            <p className="education__description">
+                                Formación de posgrado orientada al fortalecimiento de
+                                conocimientos relacionados con ingeniería de software,
+                                desarrollo de sistemas y sistemas de información.
                             </p>
 
                             <div className="education__scholarship">
-                                <strong>
+                                <span className="education__scholarship-label">
                                     Beca académica
-                                </strong>
+                                </span>
 
                                 <p>
-                                    Beneficiario de una beca/descuento académico
-                                    otorgado por World Literacy Organization (WLO).
+                                    Beneficiario de una beca/descuento académico otorgado
+                                    por World Literacy Organization (WLO).
                                 </p>
                             </div>
 
@@ -69,6 +73,7 @@ function Education() {
 
                     </article>
 
+                    {/* Licenciatura */}
                     <article className="education__item">
 
                         <div className="education__period">
@@ -77,22 +82,31 @@ function Education() {
 
                         <div className="education__content">
 
-                            <span className="education__status education__status--completed">
+                            <span
+                                className="
+                  education__status
+                  education__status--completed
+                "
+                            >
                                 Graduado
                             </span>
 
                             <h3>
-                                Licenciatura en Pedagogía de la Informática
+                                Licenciado en Pedagogía de la Informática
                             </h3>
 
                             <p className="education__institution">
                                 Universidad Nacional de Chimborazo
                             </p>
 
-                            <p>
-                                Formación orientada a informática, programación,
-                                tecnologías educativas, robótica, sistemas digitales
-                                y aplicación de tecnología en procesos de aprendizaje.
+                            <p className="education__location">
+                                Riobamba, Ecuador
+                            </p>
+
+                            <p className="education__description">
+                                Formación en informática, programación, tecnologías
+                                educativas, robótica y aplicación de herramientas
+                                tecnológicas en diferentes contextos.
                             </p>
 
                         </div>
