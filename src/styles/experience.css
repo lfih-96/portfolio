@@ -1,0 +1,196 @@
+.experience {
+    border-top: 1px solid var(--color-border);
+}
+
+.experience__timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience__item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+
+    gap: var(--space-xl);
+
+    padding-block: var(--space-xl);
+
+    border-top: 1px solid var(--color-border);
+}
+
+.experience__item:last-child {
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* ================================
+   PERIODO
+================================= */
+
+.experience__period {
+    padding-top: 0.35rem;
+
+    color: var(--color-primary);
+
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+}
+
+/* ================================
+   CONTENIDO
+================================= */
+
+.experience__content {
+    max-width: 800px;
+}
+
+.experience__type {
+    display: inline-block;
+
+    margin-bottom: var(--space-sm);
+
+    color: var(--color-text-secondary);
+
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.experience__role {
+    margin-bottom: var(--space-xs);
+
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.experience__organization {
+    color: var(--color-text);
+
+    font-weight: 600;
+}
+
+.experience__description {
+    max-width: 700px;
+
+    margin-top: var(--space-md);
+}
+
+/* ================================
+   INSTITUCIONES
+================================= */
+
+.experience__organizations {
+    margin-top: var(--space-lg);
+}
+
+.experience__label {
+    display: block;
+
+    margin-bottom: var(--space-sm);
+
+    color: var(--color-text);
+
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+}
+
+.experience__organizations ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-xs);
+}
+
+.experience__organizations li {
+    position: relative;
+
+    padding-left: 1.25rem;
+
+    color: var(--color-text-secondary);
+}
+
+.experience__organizations li::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0.7rem;
+    left: 0;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background-color: var(--color-primary);
+}
+
+/* ================================
+   LOGROS
+================================= */
+
+.experience__highlights {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--space-xs);
+
+    margin-top: var(--space-lg);
+}
+
+.experience__highlights li {
+    position: relative;
+
+    padding-left: 1.25rem;
+
+    color: var(--color-text-secondary);
+}
+
+.experience__highlights li::before {
+    content: "→";
+
+    position: absolute;
+    left: 0;
+
+    color: var(--color-primary);
+}
+
+/* ================================
+   TECNOLOGÍAS
+================================= */
+
+.experience__technologies {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--space-xs);
+
+    margin-top: var(--space-lg);
+}
+
+.experience__technologies li {
+    padding: 0.4rem 0.75rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+
+    color: var(--color-text-secondary);
+
+    font-size: var(--font-size-sm);
+}
+
+/* ================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+    .experience__item {
+        grid-template-columns: 1fr;
+
+        gap: var(--space-md);
+    }
+
+    .experience__period {
+        padding-top: 0;
+    }
+}
