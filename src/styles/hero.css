@@ -1,20 +1,110 @@
 .hero {
+    position: relative;
+
     min-height: 100vh;
 
     display: flex;
     align-items: center;
 
-    padding-block: var(--space-2xl);
+    padding-top: 7rem;
+    padding-bottom: var(--space-xl);
+
+    overflow: hidden;
 }
+
+/* Luz ambiental muy sutil */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    top: 10%;
+    right: -10%;
+
+    width: 550px;
+    height: 550px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(56, 189, 248, 0.09),
+            transparent 68%);
+
+    pointer-events: none;
+}
+
+/* ================================
+   DISTRIBUCIÓN
+================================= */
 
 .hero__container {
-    display: flex;
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.15fr) minmax(320px, 0.85fr);
+
     align-items: center;
+
+    gap: clamp(3rem, 7vw, 7rem);
 }
 
+/* ================================
+   CONTENIDO
+================================= */
+
 .hero__content {
-    max-width: 900px;
+    max-width: 780px;
 }
+
+/* ================================
+   ESTADO ACTUAL
+================================= */
+
+.hero__status {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.6rem;
+
+    margin-bottom: var(--space-lg);
+
+    padding:
+        0.45rem 0.8rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+
+    background-color: rgba(24, 24, 27, 0.7);
+
+    color: var(--color-text-secondary);
+
+    font-size: var(--font-size-sm);
+}
+
+.hero__status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background-color: var(--color-primary);
+
+    box-shadow:
+        0 0 12px rgba(56, 189, 248, 0.8);
+}
+
+/* ================================
+   EYEBROW
+================================= */
 
 .hero__eyebrow {
     margin-bottom: var(--space-sm);
@@ -28,34 +118,69 @@
     text-transform: uppercase;
 }
 
+/* ================================
+   NOMBRE
+================================= */
+
 .hero__title {
     margin-bottom: var(--space-md);
 
-    letter-spacing: -0.04em;
+    font-size:
+        clamp(3.2rem,
+            7vw,
+            6.7rem);
+
+    letter-spacing: -0.055em;
 }
 
 .hero__title span {
     color: var(--color-primary);
 }
 
-.hero__subtitle {
-    max-width: 800px;
+/* ================================
+   FORMACIÓN
+================================= */
 
-    margin-bottom: var(--space-md);
+.hero__education {
+    display: flex;
+    flex-wrap: wrap;
 
+    align-items: center;
+
+    gap:
+        0.4rem 0.75rem;
+
+    max-width: 720px;
+
+    margin-bottom: var(--space-lg);
+}
+
+.hero__education p {
     color: var(--color-text);
 
-    font-size: clamp(1.35rem, 3vw, 2rem);
+    font-size: var(--font-size-sm);
     font-weight: 500;
 }
 
+.hero__education span {
+    color: var(--color-primary);
+}
+
+/* ================================
+   DESCRIPCIÓN
+================================= */
+
 .hero__description {
-    max-width: 650px;
+    max-width: 670px;
 
     margin-bottom: var(--space-lg);
 
     font-size: var(--font-size-lg);
 }
+
+/* ================================
+   BOTONES
+================================= */
 
 .hero__actions {
     display: flex;
@@ -64,20 +189,215 @@
     gap: var(--space-sm);
 }
 
-@media (max-width: 768px) {
+/* ================================
+   REDES
+================================= */
+
+.hero__socials {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: var(--space-md);
+
+    margin-top: var(--space-xl);
+}
+
+.hero__socials-label {
+    color: var(--color-text-secondary);
+
+    font-size: var(--font-size-sm);
+}
+
+.hero__socials a {
+    color: var(--color-text);
+
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+
+    transition:
+        color var(--transition-fast);
+}
+
+.hero__socials a:hover {
+    color: var(--color-primary);
+}
+
+/* ================================
+   TARJETA DE CÓDIGO
+================================= */
+
+.hero__visual {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hero__code-card {
+    width: 100%;
+    max-width: 480px;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(145deg,
+            rgba(24, 24, 27, 0.98),
+            rgba(9, 9, 11, 0.98));
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.28);
+
+    transform: rotate(1deg);
+
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.hero__code-card:hover {
+    border-color:
+        rgba(56, 189, 248, 0.45);
+
+    transform:
+        rotate(0deg) translateY(-5px);
+}
+
+/* Cabecera */
+
+.hero__code-header {
+    min-height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    gap: var(--space-md);
+
+    padding-inline: var(--space-md);
+
+    border-bottom: 1px solid var(--color-border);
+
+    color: var(--color-text-secondary);
+
+    font-size: var(--font-size-sm);
+}
+
+.hero__code-dots {
+    display: flex;
+
+    gap: 6px;
+}
+
+.hero__code-dots span {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background-color: var(--color-border);
+}
+
+.hero__code-dots span:first-child {
+    background-color: var(--color-primary);
+}
+
+/* Código */
+
+.hero__code {
+    padding:
+        var(--space-lg) var(--space-xl) var(--space-xl);
+
+    overflow-x: auto;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 0.9rem;
+    line-height: 1.9;
+}
+
+.hero__code p {
+    white-space: nowrap;
+
+    color: var(--color-text-secondary);
+}
+
+.code-indent {
+    padding-left: 1.5rem;
+}
+
+.code-indent-2 {
+    padding-left: 3rem;
+}
+
+.code-purple {
+    color: #c084fc;
+}
+
+.code-green {
+    color: #86efac;
+}
+
+/* ================================
+   TABLET
+================================= */
+
+@media (max-width: 1024px) {
+
+    .hero__container {
+        grid-template-columns: 1fr;
+
+        gap: var(--space-xl);
+    }
+
+    .hero__visual {
+        justify-content: flex-start;
+    }
+
+    .hero__code-card {
+        max-width: 620px;
+    }
+
+}
+
+/* ================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
     .hero {
         min-height: auto;
 
-        padding-top: 8rem;
+        padding-top: 7rem;
         padding-bottom: var(--space-xl);
+    }
+
+    .hero__title {
+        font-size:
+            clamp(3rem,
+                16vw,
+                4.5rem);
+    }
+
+    .hero__education {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .hero__education>span {
+        display: none;
     }
 
     .hero__description {
         font-size: var(--font-size-base);
     }
-}
 
-@media (max-width: 480px) {
     .hero__actions {
         flex-direction: column;
     }
@@ -85,4 +405,13 @@
     .hero__actions .button {
         width: 100%;
     }
+
+    .hero__socials {
+        margin-top: var(--space-lg);
+    }
+
+    .hero__visual {
+        display: none;
+    }
+
 }

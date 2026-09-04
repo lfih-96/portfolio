@@ -74,3 +74,15 @@ h3 {
 p {
     color: var(--color-text-secondary);
 }
+
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+::selection {
+    background-color:
+        rgba(56, 189, 248, 0.25);
+
+    color: var(--color-text);
+}
