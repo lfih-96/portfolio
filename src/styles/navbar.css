@@ -1,3 +1,7 @@
+/* ========================================
+   NAVBAR
+======================================== */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -17,6 +21,8 @@
         backdrop-filter var(--transition-base);
 }
 
+/* Navbar después de hacer scroll */
+
 .navbar--scrolled {
     border-bottom-color: var(--color-border);
 
@@ -25,6 +31,10 @@
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
 }
+
+/* ========================================
+   CONTENEDOR
+======================================== */
 
 .navbar__container {
     min-height: 76px;
@@ -36,28 +46,42 @@
     gap: var(--space-lg);
 }
 
-/* ================================
+/* ========================================
    LOGO
-================================= */
+======================================== */
 
 .navbar__brand {
     position: relative;
 
     z-index: 1002;
 
+    color: var(--color-text);
+
     font-size: 1.4rem;
     font-weight: 800;
 
     letter-spacing: -0.04em;
+
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.navbar__brand:hover {
+    transform: translateY(-1px);
 }
 
 .navbar__brand span {
     color: var(--color-primary);
 }
 
-/* ================================
+.navbar__brand--active {
+    color: var(--color-text);
+}
+
+/* ========================================
    NAVEGACIÓN
-================================= */
+======================================== */
 
 .navbar__nav {
     display: flex;
@@ -77,19 +101,26 @@
     transition: color var(--transition-fast);
 }
 
+/* Hover */
+
 .navbar__link:hover {
     color: var(--color-text);
 }
+
+/* Línea inferior */
 
 .navbar__link::after {
     content: "";
 
     position: absolute;
+
     left: 0;
     bottom: -0.4rem;
 
     width: 0;
     height: 2px;
+
+    border-radius: 999px;
 
     background-color: var(--color-primary);
 
@@ -100,9 +131,21 @@
     width: 100%;
 }
 
-/* ================================
+/* ========================================
+   SECCIÓN ACTIVA
+======================================== */
+
+.navbar__link--active {
+    color: var(--color-primary);
+}
+
+.navbar__link--active::after {
+    width: 100%;
+}
+
+/* ========================================
    BOTÓN CONTACTO
-================================= */
+======================================== */
 
 .navbar__contact {
     display: inline-flex;
@@ -123,17 +166,29 @@
 
     transition:
         background-color var(--transition-base),
-        color var(--transition-base);
+        color var(--transition-base),
+        transform var(--transition-fast);
 }
 
 .navbar__contact:hover {
     background-color: var(--color-primary);
+
+    color: #020617;
+
+    transform: translateY(-1px);
+}
+
+/* Contacto activo */
+
+.navbar__contact--active {
+    background-color: var(--color-primary);
+
     color: #020617;
 }
 
-/* ================================
+/* ========================================
    BOTÓN MENÚ MÓVIL
-================================= */
+======================================== */
 
 .navbar__toggle {
     display: none;
@@ -151,10 +206,14 @@
 
     gap: 5px;
 
+    border: 0;
+
     cursor: pointer;
 
     background: transparent;
 }
+
+/* Líneas de hamburguesa */
 
 .navbar__toggle span {
     display: block;
@@ -171,60 +230,39 @@
         opacity var(--transition-base);
 }
 
-/* ================================
+/* ========================================
    OVERLAY
-================================= */
+======================================== */
 
 .navbar__overlay {
     display: none;
 }
 
-/* ================================
+/* ========================================
    RESPONSIVE
-================================= */
+======================================== */
 
 @media (max-width: 768px) {
+
+    /* ====================================
+       CONTENEDOR
+    ==================================== */
 
     .navbar__container {
         min-height: 68px;
     }
 
-    /* ================================
-       OVERLAY MÓVIL
-    ================================= */
-
-    .navbar__overlay {
-        display: block;
-
-        position: fixed;
-        inset: 0;
-
-        z-index: 900;
-
-        width: 100%;
-        height: 100%;
-
-        border: 0;
-
-        background-color: rgba(0, 0, 0, 0.65);
-
-        backdrop-filter: blur(2px);
-        -webkit-backdrop-filter: blur(2px);
-
-        cursor: pointer;
-    }
-
-    /* ================================
-       HAMBURGUESA
-    ================================= */
+    /* ====================================
+       BOTÓN HAMBURGUESA
+    ==================================== */
 
     .navbar__toggle {
         display: flex;
     }
 
-    /* ================================
+    /* ====================================
        MENÚ LATERAL
-    ================================= */
+    ==================================== */
 
     .navbar__nav {
         position: fixed;
@@ -250,14 +288,23 @@
 
         background-color: var(--color-bg-secondary);
 
+        box-shadow:
+            -20px 0 60px rgba(0, 0, 0, 0.3);
+
         transform: translateX(100%);
 
         transition: transform var(--transition-base);
     }
 
+    /* Menú visible */
+
     .navbar__nav--open {
         transform: translateX(0);
     }
+
+    /* ====================================
+       LINKS MÓVILES
+    ==================================== */
 
     .navbar__link {
         width: 100%;
@@ -265,18 +312,54 @@
         font-size: var(--font-size-lg);
     }
 
+    .navbar__link::after {
+        bottom: -0.5rem;
+    }
+
+    /* ====================================
+       CONTACTO MÓVIL
+    ==================================== */
+
     .navbar__contact {
         width: 100%;
 
         margin-top: var(--space-sm);
     }
 
-    /* ================================
+    /* ====================================
+       OVERLAY
+    ==================================== */
+
+    .navbar__overlay {
+        display: block;
+
+        position: fixed;
+        inset: 0;
+
+        z-index: 900;
+
+        width: 100%;
+        height: 100%;
+
+        padding: 0;
+
+        border: 0;
+
+        background-color: rgba(0, 0, 0, 0.65);
+
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+
+        cursor: pointer;
+    }
+
+    /* ====================================
        HAMBURGUESA → X
-    ================================= */
+    ==================================== */
 
     .navbar__toggle--active span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
+        transform:
+            translateY(7px) rotate(45deg);
     }
 
     .navbar__toggle--active span:nth-child(2) {
@@ -284,6 +367,7 @@
     }
 
     .navbar__toggle--active span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
+        transform:
+            translateY(-7px) rotate(-45deg);
     }
 }
