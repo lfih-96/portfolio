@@ -42,7 +42,8 @@
 
 .navbar__brand {
     position: relative;
-    z-index: 1001;
+
+    z-index: 1002;
 
     font-size: 1.4rem;
     font-weight: 800;
@@ -138,7 +139,8 @@
     display: none;
 
     position: relative;
-    z-index: 1001;
+
+    z-index: 1002;
 
     width: 44px;
     height: 44px;
@@ -170,6 +172,14 @@
 }
 
 /* ================================
+   OVERLAY
+================================= */
+
+.navbar__overlay {
+    display: none;
+}
+
+/* ================================
    RESPONSIVE
 ================================= */
 
@@ -179,15 +189,50 @@
         min-height: 68px;
     }
 
+    /* ================================
+       OVERLAY MÓVIL
+    ================================= */
+
+    .navbar__overlay {
+        display: block;
+
+        position: fixed;
+        inset: 0;
+
+        z-index: 900;
+
+        width: 100%;
+        height: 100%;
+
+        border: 0;
+
+        background-color: rgba(0, 0, 0, 0.65);
+
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+
+        cursor: pointer;
+    }
+
+    /* ================================
+       HAMBURGUESA
+    ================================= */
+
     .navbar__toggle {
         display: flex;
     }
+
+    /* ================================
+       MENÚ LATERAL
+    ================================= */
 
     .navbar__nav {
         position: fixed;
 
         top: 0;
         right: 0;
+
+        z-index: 1001;
 
         width: min(85%, 360px);
         height: 100vh;
@@ -226,7 +271,9 @@
         margin-top: var(--space-sm);
     }
 
-    /* Hamburguesa → X */
+    /* ================================
+       HAMBURGUESA → X
+    ================================= */
 
     .navbar__toggle--active span:nth-child(1) {
         transform: translateY(7px) rotate(45deg);
