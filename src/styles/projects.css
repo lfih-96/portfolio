@@ -1,0 +1,212 @@
+.projects {
+    border-top: 1px solid var(--color-border);
+}
+
+.projects__grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: var(--space-md);
+}
+
+/* ================================
+   TARJETA
+================================= */
+
+.project-card {
+    min-height: 430px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: var(--space-lg);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    background-color: var(--color-bg-secondary);
+
+    transition:
+        border-color var(--transition-base),
+        transform var(--transition-base),
+        background-color var(--transition-base);
+}
+
+.project-card:hover {
+    border-color: #3f3f46;
+
+    transform: translateY(-4px);
+}
+
+/* ================================
+   PROYECTO DESTACADO
+================================= */
+
+.project-card--featured {
+    grid-column: 1 / -1;
+
+    min-height: 480px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(56, 189, 248, 0.07),
+            transparent 55%),
+        var(--color-bg-secondary);
+}
+
+.project-card--featured:hover {
+    border-color: var(--color-primary);
+}
+
+/* ================================
+   CABECERA
+================================= */
+
+.project-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: var(--space-sm);
+
+    margin-bottom: var(--space-xl);
+}
+
+.project-card__number {
+    color: var(--color-primary);
+
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+}
+
+/* ================================
+   ESTADO
+================================= */
+
+.project-card__status {
+    padding: 0.35rem 0.7rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+
+    color: var(--color-text-secondary);
+
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.project-card__status--development {
+    border-color: rgba(56, 189, 248, 0.4);
+
+    color: var(--color-primary);
+}
+
+/* ================================
+   CONTENIDO
+================================= */
+
+.project-card__content {
+    max-width: 720px;
+}
+
+.project-card__category {
+    display: block;
+
+    margin-bottom: var(--space-xs);
+
+    color: var(--color-text-secondary);
+
+    font-size: var(--font-size-sm);
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.project-card__title {
+    margin-bottom: var(--space-md);
+
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+}
+
+.project-card__description {
+    max-width: 650px;
+
+    font-size: var(--font-size-base);
+}
+
+/* ================================
+   TECNOLOGÍAS
+================================= */
+
+.project-card__technologies {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--space-xs);
+
+    margin-top: var(--space-lg);
+}
+
+.project-card__technologies li {
+    padding: 0.4rem 0.7rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+
+    color: var(--color-text-secondary);
+
+    font-size: var(--font-size-sm);
+}
+
+/* ================================
+   ACCIONES
+================================= */
+
+.project-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--space-lg);
+
+    margin-top: auto;
+    padding-top: var(--space-xl);
+}
+
+.project-card__link {
+    color: var(--color-text);
+
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+
+    transition: color var(--transition-fast);
+}
+
+.project-card__link:hover {
+    color: var(--color-primary);
+}
+
+/* ================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+    .projects__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card--featured {
+        grid-column: auto;
+    }
+
+    .project-card {
+        min-height: 390px;
+    }
+
+    .project-card--featured {
+        min-height: 420px;
+    }
+
+}

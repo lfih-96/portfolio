@@ -2,11 +2,11 @@ const experience = [
     {
         id: 'global-exchange',
         period: 'Actualidad',
-        role: 'Desarrollador Junior',
+        role: 'Pasante',
         organization: 'Global Exchange',
         type: 'Experiencia profesional',
         description:
-            'Actualmente me desempeño como Desarrollador Junior, orientando mi crecimiento profesional al desarrollo de software y sistemas de información.',
+            'Actualmente realizo una pasantía en Global Exchange, donde continúo desarrollando experiencia práctica en proyectos relacionados con desarrollo de software y sistemas de información.',
         highlights: [],
         technologies: [],
     },
