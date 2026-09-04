@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 import Hero from './sections/Hero'
 import About from './sections/About'
@@ -22,6 +23,8 @@ function App() {
         <Education />
         <Contact />
       </main>
+
+      <Footer />
     </>
   )
 }
