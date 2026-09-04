@@ -1,4 +1,6 @@
 import skills from '../data/skills'
+import SkillIcon from '../components/SkillIcon'
+
 import '../styles/skills.css'
 
 function Skills() {
@@ -9,7 +11,6 @@ function Skills() {
         >
             <div className="container">
 
-                {/* ENCABEZADO */}
                 <div
                     className="section__header"
                     data-reveal
@@ -29,7 +30,6 @@ function Skills() {
                     </p>
                 </div>
 
-                {/* TARJETAS DE HABILIDADES */}
                 <div className="skills__grid">
 
                     {skills.map((category, index) => (
@@ -53,10 +53,22 @@ function Skills() {
 
                                 {category.technologies.map((technology) => (
                                     <li
-                                        key={technology}
+                                        key={technology.name}
                                         className="skills__technology"
                                     >
-                                        {technology}
+                                        <SkillIcon
+                                            technology={technology.name}
+                                        />
+
+                                        <span>
+                                            {technology.name}
+                                        </span>
+
+                                        {technology.learning && (
+                                            <span className="skills__learning">
+                                                En aprendizaje
+                                            </span>
+                                        )}
                                     </li>
                                 ))}
 

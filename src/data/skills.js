@@ -3,10 +3,18 @@ const skills = [
         id: 'languages',
         title: 'Lenguajes',
         technologies: [
-            'Python',
-            'JavaScript',
-            'Java',
-            'C++',
+            {
+                name: 'Python',
+            },
+            {
+                name: 'JavaScript',
+            },
+            {
+                name: 'Java',
+            },
+            {
+                name: 'C++',
+            },
         ],
     },
 
@@ -14,11 +22,21 @@ const skills = [
         id: 'frontend',
         title: 'Frontend',
         technologies: [
-            'HTML5',
-            'CSS',
-            'JavaScript',
-            'JSX',
-            'React',
+            {
+                name: 'HTML5',
+            },
+            {
+                name: 'CSS3',
+            },
+            {
+                name: 'JavaScript',
+            },
+            {
+                name: 'JSX',
+            },
+            {
+                name: 'React',
+            },
         ],
     },
 
@@ -26,8 +44,14 @@ const skills = [
         id: 'databases',
         title: 'Bases de datos',
         technologies: [
-            'SQL · En aprendizaje',
-            'PostgreSQL · En aprendizaje',
+            {
+                name: 'SQL',
+                learning: true,
+            },
+            {
+                name: 'PostgreSQL',
+                learning: true,
+            },
         ],
     },
 
@@ -35,8 +59,12 @@ const skills = [
         id: 'version-control',
         title: 'Control de versiones',
         technologies: [
-            'Git',
-            'GitHub',
+            {
+                name: 'Git',
+            },
+            {
+                name: 'GitHub',
+            },
         ],
     },
 
@@ -44,10 +72,18 @@ const skills = [
         id: 'embedded',
         title: 'Hardware y prototipado',
         technologies: [
-            'Arduino',
-            'ESP32',
-            'ESP8266',
-            'Arduino IDE',
+            {
+                name: 'Arduino',
+            },
+            {
+                name: 'ESP32',
+            },
+            {
+                name: 'ESP8266',
+            },
+            {
+                name: 'Arduino IDE',
+            },
         ],
     },
 
@@ -55,11 +91,21 @@ const skills = [
         id: 'emerging',
         title: 'Tecnologías emergentes',
         technologies: [
-            'Inteligencia Artificial',
-            'Realidad Virtual',
-            'Realidad Aumentada',
-            'Impresión 3D',
-            'Blender',
+            {
+                name: 'Inteligencia Artificial',
+            },
+            {
+                name: 'Realidad Virtual',
+            },
+            {
+                name: 'Realidad Aumentada',
+            },
+            {
+                name: 'Impresión 3D',
+            },
+            {
+                name: 'Blender',
+            },
         ],
     },
 ]
