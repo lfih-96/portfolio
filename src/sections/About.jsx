@@ -8,7 +8,10 @@ function About() {
         >
             <div className="container">
 
-                <div className="section__header">
+                <div
+                    className="section__header"
+                    data-reveal
+                >
 
                     <span className="section__eyebrow">
                         Sobre mí
@@ -23,7 +26,10 @@ function About() {
 
                 <div className="about__content">
 
-                    <div className="about__text">
+                    <div
+                        className="about__text"
+                        data-reveal="left"
+                    >
 
                         <p>
                             Soy Licenciado en Pedagogía de la Informática y actualmente
@@ -47,7 +53,10 @@ function About() {
 
                     </div>
 
-                    <div className="about__highlights">
+                    <div
+                        className="about__highlights"
+                        data-reveal="right"
+                    >
 
                         <article className="about__highlight">
 

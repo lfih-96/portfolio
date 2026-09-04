@@ -8,7 +8,10 @@ function Education() {
         >
             <div className="container">
 
-                <div className="section__header">
+                <div
+                    className="section__header"
+                    data-reveal
+                >
                     <span className="section__eyebrow">
                         Formación
                     </span>
@@ -27,8 +30,10 @@ function Education() {
                 <div className="education__timeline">
 
                     {/* Maestría */}
-                    <article className="education__item">
-
+                    <article
+                        className="education__item"
+                        data-reveal
+                    >
                         <div className="education__period">
                             Actualidad
                         </div>
@@ -70,24 +75,20 @@ function Education() {
                             </div>
 
                         </div>
-
                     </article>
 
                     {/* Licenciatura */}
-                    <article className="education__item">
-
+                    <article
+                        className="education__item"
+                        data-reveal
+                    >
                         <div className="education__period">
                             2025
                         </div>
 
                         <div className="education__content">
 
-                            <span
-                                className="
-                  education__status
-                  education__status--completed
-                "
-                            >
+                            <span className="education__status education__status--completed">
                                 Graduado
                             </span>
 
@@ -110,7 +111,6 @@ function Education() {
                             </p>
 
                         </div>
-
                     </article>
 
                 </div>

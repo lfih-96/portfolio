@@ -9,7 +9,11 @@ function Skills() {
         >
             <div className="container">
 
-                <div className="section__header">
+                {/* ENCABEZADO */}
+                <div
+                    className="section__header"
+                    data-reveal
+                >
                     <span className="section__eyebrow">
                         Habilidades
                     </span>
@@ -25,11 +29,17 @@ function Skills() {
                     </p>
                 </div>
 
+                {/* TARJETAS DE HABILIDADES */}
                 <div className="skills__grid">
+
                     {skills.map((category, index) => (
                         <article
                             key={category.id}
                             className="skills__category"
+                            data-reveal
+                            style={{
+                                '--reveal-delay': `${index * 100}ms`,
+                            }}
                         >
                             <span className="skills__category-number">
                                 {String(index + 1).padStart(2, '0')}
@@ -40,6 +50,7 @@ function Skills() {
                             </h3>
 
                             <ul className="skills__list">
+
                                 {category.technologies.map((technology) => (
                                     <li
                                         key={technology}
@@ -48,9 +59,11 @@ function Skills() {
                                         {technology}
                                     </li>
                                 ))}
+
                             </ul>
                         </article>
                     ))}
+
                 </div>
 
             </div>

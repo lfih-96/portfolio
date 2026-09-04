@@ -7,6 +7,7 @@ function ProjectCard({ project, index }) {
                     ? 'project-card--featured'
                     : ''
                 }`}
+            data-reveal
         >
 
             <div className="project-card__header">
@@ -17,8 +18,8 @@ function ProjectCard({ project, index }) {
 
                 <span
                     className={`project-card__status ${project.status === 'En desarrollo'
-                            ? 'project-card__status--development'
-                            : ''
+                        ? 'project-card__status--development'
+                        : ''
                         }`}
                 >
                     {project.status}

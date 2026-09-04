@@ -1,0 +1,68 @@
+/* ========================================
+   REVEAL BASE
+======================================== */
+
+[data-reveal] {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 700ms ease,
+        transform 700ms ease;
+
+    transition-delay:
+        var(--reveal-delay, 0ms);
+}
+
+/* Elemento visible */
+
+[data-reveal].reveal--visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+/* ========================================
+   VARIANTES
+======================================== */
+
+[data-reveal="left"] {
+    transform: translateX(-30px);
+}
+
+[data-reveal="right"] {
+    transform: translateX(30px);
+}
+
+[data-reveal="scale"] {
+    transform: scale(0.96);
+}
+
+[data-reveal="left"].reveal--visible,
+[data-reveal="right"].reveal--visible {
+    transform: translateX(0);
+}
+
+[data-reveal="scale"].reveal--visible {
+    transform: scale(1);
+}
+
+/* ========================================
+   ACCESIBILIDAD
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    [data-reveal] {
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+    }
+
+    [data-reveal].reveal--visible {
+        transform: none;
+    }
+}

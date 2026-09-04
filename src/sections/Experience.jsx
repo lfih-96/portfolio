@@ -9,7 +9,10 @@ function Experience() {
         >
             <div className="container">
 
-                <div className="section__header">
+                <div
+                    className="section__header"
+                    data-reveal
+                >
                     <span className="section__eyebrow">
                         Experiencia
                     </span>

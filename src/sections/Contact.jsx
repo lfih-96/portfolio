@@ -9,7 +9,10 @@ function Contact() {
     >
       <div className="container">
 
-        <div className="contact__content">
+        <div
+          className="contact__content"
+          data-reveal="scale"
+        >
 
           <span className="section__eyebrow">
             Contacto

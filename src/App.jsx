@@ -9,7 +9,11 @@ import Experience from './sections/Experience'
 import Education from './sections/Education'
 import Contact from './sections/Contact'
 
+import useRevealAnimations from './hooks/useRevealAnimations'
+
 function App() {
+  useRevealAnimations()
+
   return (
     <>
       <Navbar />
