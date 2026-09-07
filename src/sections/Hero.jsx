@@ -9,24 +9,46 @@ function Hero() {
         >
             <div className="container hero__container">
 
+                {/* ========================================
+                    CONTENIDO PRINCIPAL
+                ======================================== */}
+
                 <div className="hero__content">
 
+                    {/* ESTADO ACTUAL */}
+
                     <div className="hero__status">
-                        <span className="hero__status-dot"></span>
+                        <span
+                            className="hero__status-dot"
+                            aria-hidden="true"
+                        ></span>
 
                         <span>
                             Pasante en Global Exchange
                         </span>
                     </div>
 
+                    {/* PERFIL */}
+
                     <p className="hero__eyebrow">
                         Software Developer
                     </p>
 
+                    {/* NOMBRE */}
+
                     <h1 className="hero__title">
-                        Luis Fernando
-                        <span> Ilbay</span>
+
+                        <span className="hero__title-name">
+                            Luis Fernando
+                        </span>
+
+                        <span className="hero__title-lastname">
+                            Ilbay
+                        </span>
+
                     </h1>
+
+                    {/* FORMACIÓN */}
 
                     <div className="hero__education">
 
@@ -34,7 +56,12 @@ function Hero() {
                             Licenciado en Pedagogía de la Informática
                         </p>
 
-                        <span aria-hidden="true">•</span>
+                        <span
+                            className="hero__education-separator"
+                            aria-hidden="true"
+                        >
+                            •
+                        </span>
 
                         <p>
                             Maestrante en Ingeniería de Software
@@ -43,11 +70,16 @@ function Hero() {
 
                     </div>
 
+                    {/* DESCRIPCIÓN */}
+
                     <p className="hero__description">
-                        Desarrollo soluciones de software y sistemas de información
-                        orientados a resolver problemas reales, combinando programación,
-                        desarrollo web y una formación tecnológica multidisciplinaria.
+                        Desarrollo soluciones de software y sistemas de
+                        información orientados a resolver problemas reales,
+                        combinando programación, desarrollo web y una
+                        formación tecnológica multidisciplinaria.
                     </p>
+
+                    {/* BOTONES */}
 
                     <div className="hero__actions">
 
@@ -67,6 +99,8 @@ function Hero() {
                         </a>
 
                     </div>
+
+                    {/* REDES */}
 
                     <div className="hero__socials">
 
@@ -96,12 +130,18 @@ function Hero() {
 
                 </div>
 
+                {/* ========================================
+                    TARJETA DE CÓDIGO
+                ======================================== */}
+
                 <div
                     className="hero__visual"
                     aria-hidden="true"
                 >
 
                     <div className="hero__code-card">
+
+                        {/* CABECERA */}
 
                         <div className="hero__code-header">
 
@@ -116,6 +156,8 @@ function Hero() {
                             </span>
 
                         </div>
+
+                        {/* CÓDIGO */}
 
                         <div className="hero__code">
 

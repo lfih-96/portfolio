@@ -11,11 +11,12 @@ function Projects() {
         >
             <div className="container">
 
+                {/* ENCABEZADO */}
+
                 <div
                     className="section__header"
                     data-reveal
                 >
-
                     <span className="section__eyebrow">
                         Proyectos
                     </span>
@@ -31,8 +32,9 @@ function Projects() {
                         tecnologías emergentes para resolver diferentes
                         necesidades.
                     </p>
-
                 </div>
+
+                {/* PROYECTOS */}
 
                 <div className="projects__grid">
 

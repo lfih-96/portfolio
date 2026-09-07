@@ -1,4 +1,10 @@
+/* ========================================
+   SECCIÓN PROYECTOS
+======================================== */
+
 .projects {
+    position: relative;
+
     border-top: 1px solid var(--color-border);
 }
 
@@ -11,11 +17,13 @@
     gap: var(--space-md);
 }
 
-/* ================================
+/* ========================================
    TARJETA
-================================= */
+======================================== */
 
 .project-card {
+    position: relative;
+
     min-height: 430px;
 
     display: flex;
@@ -23,26 +31,32 @@
 
     padding: var(--space-lg);
 
+    overflow: hidden;
+
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
 
     background-color: var(--color-bg-secondary);
 
     transition:
-        border-color var(--transition-base),
         transform var(--transition-base),
-        background-color var(--transition-base);
+        border-color var(--transition-base),
+        background-color var(--transition-base),
+        box-shadow var(--transition-base);
 }
 
 .project-card:hover {
+    transform: translateY(-5px);
+
     border-color: #3f3f46;
 
-    transform: translateY(-4px);
+    box-shadow:
+        0 24px 60px rgba(0, 0, 0, 0.18);
 }
 
-/* ================================
+/* ========================================
    PROYECTO DESTACADO
-================================= */
+======================================== */
 
 .project-card--featured {
     grid-column: 1 / -1;
@@ -50,28 +64,56 @@
     min-height: 480px;
 
     background:
+        radial-gradient(circle at 85% 15%,
+            rgba(56, 189, 248, 0.12),
+            transparent 32%),
         linear-gradient(135deg,
-            rgba(56, 189, 248, 0.07),
+            rgba(56, 189, 248, 0.04),
             transparent 55%),
         var(--color-bg-secondary);
 }
 
 .project-card--featured:hover {
-    border-color: var(--color-primary);
+    border-color:
+        rgba(56, 189, 248, 0.55);
 }
 
-/* ================================
+.project-card--featured::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+        linear-gradient(90deg,
+            var(--color-primary),
+            transparent 65%);
+}
+
+/* ========================================
    CABECERA
-================================= */
+======================================== */
 
 .project-card__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    gap: var(--space-sm);
+    gap: var(--space-md);
 
     margin-bottom: var(--space-xl);
+}
+
+.project-card__identity {
+    display: flex;
+    align-items: center;
+
+    gap: var(--space-sm);
 }
 
 .project-card__number {
@@ -81,11 +123,30 @@
     font-weight: 700;
 }
 
-/* ================================
+/* ========================================
+   DESTACADO
+======================================== */
+
+.project-card__featured-label {
+    color: var(--color-text-secondary);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* ========================================
    ESTADO
-================================= */
+======================================== */
 
 .project-card__status {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.45rem;
+
     padding: 0.35rem 0.7rem;
 
     border: 1px solid var(--color-border);
@@ -98,14 +159,93 @@
 }
 
 .project-card__status--development {
-    border-color: rgba(56, 189, 248, 0.4);
+    border-color:
+        rgba(56, 189, 248, 0.35);
+
+    background-color:
+        rgba(56, 189, 248, 0.05);
 
     color: var(--color-primary);
 }
 
-/* ================================
+.project-card__status--completed {
+    background-color:
+        rgba(255, 255, 255, 0.02);
+}
+
+.project-card__status-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background-color: var(--color-primary);
+
+    box-shadow:
+        0 0 10px rgba(56, 189, 248, 0.75);
+}
+
+/* ========================================
+   CUERPO
+======================================== */
+
+.project-card__body {
+    display: grid;
+
+    grid-template-columns:
+        auto minmax(0, 1fr);
+
+    align-items: flex-start;
+
+    gap: var(--space-lg);
+}
+
+/* ========================================
+   ICONO
+======================================== */
+
+.project-card__icon-wrapper {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    background-color:
+        rgba(56, 189, 248, 0.04);
+
+    transition:
+        border-color var(--transition-base),
+        background-color var(--transition-base),
+        transform var(--transition-base);
+}
+
+.project-card:hover .project-card__icon-wrapper {
+    border-color:
+        rgba(56, 189, 248, 0.4);
+
+    background-color:
+        rgba(56, 189, 248, 0.08);
+
+    transform: rotate(-3deg);
+}
+
+.project-card__project-icon {
+    width: 24px;
+    height: 24px;
+
+    color: var(--color-primary);
+}
+
+/* ========================================
    CONTENIDO
-================================= */
+======================================== */
 
 .project-card__content {
     max-width: 720px;
@@ -120,14 +260,19 @@
 
     font-size: var(--font-size-sm);
 
-    text-transform: uppercase;
     letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .project-card__title {
     margin-bottom: var(--space-md);
 
-    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    font-size:
+        clamp(1.7rem,
+            4vw,
+            2.7rem);
+
+    letter-spacing: -0.025em;
 }
 
 .project-card__description {
@@ -136,9 +281,9 @@
     font-size: var(--font-size-base);
 }
 
-/* ================================
+/* ========================================
    TECNOLOGÍAS
-================================= */
+======================================== */
 
 .project-card__technologies {
     display: flex;
@@ -150,7 +295,8 @@
 }
 
 .project-card__technologies li {
-    padding: 0.4rem 0.7rem;
+    padding:
+        0.4rem 0.7rem;
 
     border: 1px solid var(--color-border);
     border-radius: 999px;
@@ -158,40 +304,65 @@
     color: var(--color-text-secondary);
 
     font-size: var(--font-size-sm);
+
+    transition:
+        border-color var(--transition-fast),
+        color var(--transition-fast);
 }
 
-/* ================================
+.project-card__technologies li:hover {
+    border-color:
+        rgba(56, 189, 248, 0.4);
+
+    color: var(--color-text);
+}
+
+/* ========================================
    ACCIONES
-================================= */
+======================================== */
 
 .project-card__actions {
     display: flex;
     flex-wrap: wrap;
 
-    gap: var(--space-lg);
+    gap: var(--space-md);
 
     margin-top: auto;
     padding-top: var(--space-xl);
 }
 
 .project-card__link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.5rem;
+
     color: var(--color-text);
 
     font-size: var(--font-size-sm);
     font-weight: 600;
 
-    transition: color var(--transition-fast);
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.project-card__link svg {
+    width: 14px;
+    height: 14px;
 }
 
 .project-card__link:hover {
     color: var(--color-primary);
+
+    transform: translateX(2px);
 }
 
-/* ================================
-   RESPONSIVE
-================================= */
+/* ========================================
+   TABLET
+======================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
     .projects__grid {
         grid-template-columns: 1fr;
@@ -201,12 +372,38 @@
         grid-column: auto;
     }
 
-    .project-card {
-        min-height: 390px;
+}
+
+/* ========================================
+   MÓVIL
+======================================== */
+
+@media (max-width: 600px) {
+
+    .project-card,
+    .project-card--featured {
+        min-height: auto;
+
+        padding: var(--space-md);
     }
 
-    .project-card--featured {
-        min-height: 420px;
+    .project-card__header {
+        align-items: flex-start;
+
+        margin-bottom: var(--space-lg);
+    }
+
+    .project-card__body {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card__icon-wrapper {
+        width: 52px;
+        height: 52px;
+    }
+
+    .project-card__actions {
+        padding-top: var(--space-lg);
     }
 
 }
