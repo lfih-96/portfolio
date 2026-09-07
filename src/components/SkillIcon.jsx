@@ -19,6 +19,7 @@ import {
     FaRobot,
     FaCube,
     FaVrCardboard,
+    FaLanguage,
 } from 'react-icons/fa'
 
 function SkillIcon({ technology }) {
@@ -49,6 +50,9 @@ function SkillIcon({ technology }) {
         'Realidad Aumentada': FaCube,
         'Impresión 3D': FaCube,
         Blender: SiBlender,
+
+        Español: FaLanguage,
+        'Inglés B1': FaLanguage,
     }
 
     const Icon = icons[technology] || FaCode

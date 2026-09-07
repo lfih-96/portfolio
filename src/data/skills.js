@@ -108,6 +108,19 @@ const skills = [
             },
         ],
     },
+
+    {
+        id: 'languages-spoken',
+        title: 'Idiomas',
+        technologies: [
+            {
+                name: 'Español',
+            },
+            {
+                name: 'Inglés B1',
+            },
+        ],
+    },
 ]
 
 export default skills

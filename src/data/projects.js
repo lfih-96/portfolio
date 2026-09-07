@@ -4,24 +4,23 @@ const projects = [
 
         title: 'Security Management',
 
-        category: 'Sistema de gestión',
+        category: 'Sistema Full Stack',
 
         status: 'En desarrollo',
 
         featured: true,
 
         description:
-            'Sistema de software orientado a la gestión de procesos relacionados con operaciones de seguridad.',
+            'Sistema para la gestión integral de una empresa de seguridad, incluyendo guardias, clientes, ubicaciones, puestos de seguridad, turnos, incidentes y operaciones.',
 
         technologies: [
             'JavaScript',
-            'SQL',
+            'Node.js',
+            'Express',
             'PostgreSQL',
-            'Git',
-            'GitHub',
         ],
 
-        github: '',
+        github: 'PEGAR_AQUI_URL_DEL_REPOSITORIO_SECURITY_MANAGEMENT',
 
         demo: '',
 
@@ -48,9 +47,9 @@ const projects = [
             'JavaScript',
         ],
 
-        github: '',
+        github: 'PEGAR_AQUI_URL_DEL_REPOSITORIO_PORTAFOLIO_ANTERIOR',
 
-        demo: 'https://lfih-96.github.io/',
+        demo: 'PEGAR_AQUI_URL_DE_LA_DEMO_DEL_PORTAFOLIO_ANTERIOR',
 
         image: '',
     },
@@ -75,7 +74,7 @@ const projects = [
 
         github: '',
 
-        demo: 'https://edu.cospaces.io/FNM-ACJ',
+        demo: 'PEGAR_AQUI_URL_DE_LA_GUIA_UNACH',
 
         image: '',
     },
