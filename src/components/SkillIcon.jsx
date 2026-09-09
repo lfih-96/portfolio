@@ -45,7 +45,7 @@ function SkillIcon({ technology }) {
         ESP8266: SiEspressif,
         'Arduino IDE': SiArduino,
 
-        'Inteligencia Artificial': FaRobot,
+        'IA aplicada al desarrollo de software': FaRobot,
         'Realidad Virtual': FaVrCardboard,
         'Realidad Aumentada': FaCube,
         'Impresión 3D': FaCube,

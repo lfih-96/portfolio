@@ -92,7 +92,7 @@ const skills = [
         title: 'Tecnologías emergentes',
         technologies: [
             {
-                name: 'Inteligencia Artificial',
+                name: 'IA aplicada al desarrollo de software',
             },
             {
                 name: 'Realidad Virtual',

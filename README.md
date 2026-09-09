@@ -1,3 +1,9 @@
+## 🌐 Demo
+
+El portafolio se encuentra disponible públicamente en:
+
+**[luis-fernando-ilbay.vercel.app](https://luis-fernando-ilbay.vercel.app)**
+
 # 💼 Portfolio Profesional — Luis Fernando Ilbay
 
 Portafolio web profesional desarrollado para presentar mi perfil, formación académica, experiencia, habilidades técnicas y proyectos relacionados con el desarrollo de software y los sistemas de información.
@@ -45,6 +51,13 @@ El portafolio está orientado principalmente a oportunidades relacionadas con **
 
 `IntersectionObserver`
 
+### Inteligencia Artificial
+
+- IA aplicada al desarrollo de software
+- Análisis y resolución de problemas asistidos por IA
+- Generación y revisión de código asistida por IA
+- Depuración y documentación asistida por IA
+- Apoyo al aprendizaje de nuevas tecnologías
 ---
 
 ## ✨ Características
