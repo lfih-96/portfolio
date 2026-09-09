@@ -22,7 +22,7 @@ import {
     FaLanguage,
 } from 'react-icons/fa'
 
-function SkillIcon({ technology }) {
+function SkillIcon({ name }) {
     const icons = {
         Python: SiPython,
         JavaScript: SiJavascript,
@@ -40,14 +40,15 @@ function SkillIcon({ technology }) {
         Git: SiGit,
         GitHub: SiGithub,
 
+        'IA aplicada al desarrollo de software': FaRobot,
+
         Arduino: SiArduino,
         ESP32: SiEspressif,
         ESP8266: SiEspressif,
         'Arduino IDE': SiArduino,
 
-        'IA aplicada al desarrollo de software': FaRobot,
         'Realidad Virtual': FaVrCardboard,
-        'Realidad Aumentada': FaCube,
+        'Realidad Aumentada': FaVrCardboard,
         'Impresión 3D': FaCube,
         Blender: SiBlender,
 
@@ -55,11 +56,11 @@ function SkillIcon({ technology }) {
         'Inglés B1': FaLanguage,
     }
 
-    const Icon = icons[technology] || FaCode
+    const Icon = icons[name] || FaCode
 
     return (
         <Icon
-            className="skills__technology-icon"
+            className="skill-card__icon"
             aria-hidden="true"
         />
     )
