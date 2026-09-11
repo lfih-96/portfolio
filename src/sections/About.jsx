@@ -51,6 +51,13 @@ function About() {
                             profesional y proyectos de software reales.
                         </p>
 
+                        <p>
+                            También utilizo herramientas de inteligencia artificial como apoyo
+                            durante el desarrollo de software para analizar problemas, explorar
+                            soluciones, revisar y depurar código, documentar proyectos y acelerar
+                            el aprendizaje de nuevas tecnologías. Mantengo la validación técnica
+                            y la toma de decisiones sobre las soluciones implementadas.
+                        </p>
                     </div>
 
                     <div
@@ -107,6 +114,21 @@ function About() {
                                 </p>
                             </div>
 
+                        </article>
+
+                        <article className="about__highlight">
+                            <span className="about__highlight-number">
+                                04
+                            </span>
+
+                            <div>
+                                <h3>IA aplicada</h3>
+
+                                <p>
+                                    Uso de inteligencia artificial como apoyo para análisis,
+                                    desarrollo, depuración, documentación y aprendizaje técnico.
+                                </p>
+                            </div>
                         </article>
 
                     </div>
